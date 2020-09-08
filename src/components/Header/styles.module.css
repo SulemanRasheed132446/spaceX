@@ -41,5 +41,6 @@ header button:hover {
     }
     .text {
         margin-top: 0rem;
+        width: 100%;
     }
   }

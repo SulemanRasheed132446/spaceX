@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import MissionList from './components/MissionList';
+import RocketsContainer from './components/RocketsList/RocketContainer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Header />
             <div className="Details">
               <MissionList />
+              <RocketsContainer />
             </div>
           </Route>
           <Route path='/launches'><p>1</p></Route>

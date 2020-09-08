@@ -5,11 +5,10 @@ interface Props {
     data: GetMissionQuery
 }
 const Missions: React.FC<Props> = ({ data }) => {
-    console.log(data.mission)
     return (
-        <Grid item>
+        <Grid >
             <h1><span>{data.mission?.mission_name}</span></h1>
-            <p>{data.mission?.description}</p>
+            <p>{data.mission?.description?.slice(0, 500)} ...</p>
             <div>
                 <a href={data.mission!.wikipedia!}> Wikipedia</a>
             </div>

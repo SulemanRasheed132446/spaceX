@@ -9,7 +9,7 @@ const MissionList = () => {
     return (
         <div className="container">
             <Grid container spacing={3} justify="space-evenly">
-                <Grid item xs={3} >
+                <Grid item xs={5} md={3} >
                     <div className={missions}>
                         {missionsList.map(mission => (
                             <div
@@ -20,7 +20,7 @@ const MissionList = () => {
                         ))}
                     </div>
                 </Grid>
-                <Grid item xs={9} >
+                <Grid item xs={6} md={9}>
                     <MissionsContainer mission_id={missionId} />
                 </Grid>
             </Grid>
