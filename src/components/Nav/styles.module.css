@@ -1,0 +1,29 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navLinks {
+    list-style: none;
+    display: flex;
+}
+.navLink {
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    transition: all 0.2s;
+}
+.navLink:hover {
+    color: #5a67d8;
+}
+.logo {
+    color: #5a67d8;
+    font-size: 2rem;
+}
+.logo:hover{
+    opacity: 0.9;
+}
+
+.navLink a {
+    text-decoration:none;
+    color:inherit
+}
