@@ -9,20 +9,22 @@ export const Nav = () => {
         navLink
     } = styles
     return (
-        <nav className={navBar}>
-            <div className={logo}>SPACE X</div>
-            <ul className={navLinks}>
-                <li className={navLink}>
-                    <Link to='/'>
-                        Home
+        <div className="container">
+            <nav className={navBar}>
+                <div className={logo}>SPACE X</div>
+                <ul className={navLinks}>
+                    <li className={navLink}>
+                        <Link to='/'>
+                            Home
                     </Link>
-                </li>
-                <li className={navLink}>
-                    <Link to='/launches'>
-                        Launches
+                    </li>
+                    <li className={navLink}>
+                        <Link to='/launches'>
+                            Launches
                     </Link>
-                </li>
-            </ul>
-        </nav>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     )
 }

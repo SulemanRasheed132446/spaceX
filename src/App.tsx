@@ -6,15 +6,19 @@ import {
   Route
 } from 'react-router-dom';
 import Header from './components/Header';
+import MissionList from './components/MissionList';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div >
         <Nav />
         <Switch>
           <Route path='/' exact >
             <Header />
+            <div className="Details">
+              <MissionList />
+            </div>
           </Route>
           <Route path='/launches'><p>1</p></Route>
 

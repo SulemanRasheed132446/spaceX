@@ -1,0 +1,25 @@
+.missions {
+    background:#5a67d8;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+.missions div {
+    padding-left: 0.5rem;
+    width:100%;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    transition:all 0.5s;
+}
+
+.selected {
+    border-left: 2px solid black;
+}
+
+@media only screen and (max-width:1280px) {
+    .missions {
+        height:600px;
+    }
+}
