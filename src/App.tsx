@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route path='/' exact >fsadhg</Route>
+          <Route path='/' exact >
+            <Header />
+          </Route>
           <Route path='/launches'><p>1</p></Route>
 
         </Switch>
