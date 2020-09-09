@@ -9,8 +9,16 @@ const RocketsContainer = () => {
         return <p>Loading</p>
     }
     if (error) {
-        return <p>Error</p>
+        const dataStorage = JSON.parse(window.localStorage.getItem('rockets')!);
+        return (
+            <div className="container margin">
+                <Grid container spacing={3} justify="space-evenly">
+                    <RocketsList data={dataStorage as GetRocketsQuery} />
+                </Grid>
+            </div>
+        )
     }
+    window.localStorage.setItem('rockets', JSON.stringify(data));
     return (
         <div className="container margin">
             <Grid container spacing={3} justify="space-evenly">
