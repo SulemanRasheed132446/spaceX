@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGetRocketsQuery } from '../../generated/graphql'
+import { useGetRocketsQuery, GetRocketsQuery } from '../../generated/graphql'
 import { Grid } from '@material-ui/core';
 import RocketsList from '.';
 
