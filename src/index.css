@@ -86,3 +86,17 @@ h1 span{
   background-repeat: no-repeat;
   z-index: -1;
 }
+
+button {
+  background-color: #5a67d8;
+  border: 2px solid #5a67d8;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.launchBtn {
+  text-align:center;
+  margin:4rem;
+}

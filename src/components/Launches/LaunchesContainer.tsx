@@ -20,12 +20,14 @@ const LaunchesContainer = () => {
             <Grid container spacing={4} justify="space-evenly" alignContent="center">
                 <Launches data={data!} />
             </Grid>
-            <button
-                onClick={() => {
-                    refetch({ limit: launches + 2, order: Order.Desc });
-                    setlaunches(launches + 2);
-                }}
-            >More</button>
+            <div className="launchBtn">
+                <button
+                    onClick={() => {
+                        refetch({ limit: launches + 2, order: Order.Desc });
+                        setlaunches(launches + 2);
+                    }}
+                >More</button>
+            </div>
         </div>
     )
 }
