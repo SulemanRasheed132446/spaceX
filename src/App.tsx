@@ -8,11 +8,13 @@ import {
 import Header from './components/Header';
 import MissionList from './components/MissionList';
 import RocketsContainer from './components/RocketsList/RocketContainer';
+import LaunchesContainer from './components/Launches/LaunchesContainer';
 
 function App() {
   return (
     <Router>
       <div >
+        <div className="background"></div>
         <Nav />
         <Switch>
           <Route path='/' exact >
@@ -22,8 +24,9 @@ function App() {
               <RocketsContainer />
             </div>
           </Route>
-          <Route path='/launches'><p>1</p></Route>
-
+          <Route path='/launches'>
+            <LaunchesContainer />
+          </Route>
         </Switch>
       </div>
     </Router>

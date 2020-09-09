@@ -1,0 +1,32 @@
+.launchDiv {
+    background-color:rgb(26, 32, 44);
+    border-radius: 10px;
+    height:100%;
+    transition: all 0.4s;
+}
+
+.launchDiv:hover {
+    background-color: rgba(26, 32, 44, 0.9);
+}
+
+.launchDiv img{
+    height:200px;
+    width:100%;
+    border-radius: 10px;
+
+}
+
+.launchDiv p {
+    margin:0.3rem
+}
+
+.content {
+    padding:1rem;
+}
+
+.content span {
+    color:#5a67d8;
+}
+.success {
+    color:green
+}

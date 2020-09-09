@@ -733,6 +733,27 @@ export enum CacheControlScope {
 }
 
 
+export type GetLaunchesQueryVariables = Exact<{
+  order: Order;
+  limit: Scalars['Int'];
+}>;
+
+
+export type GetLaunchesQuery = (
+  { __typename?: 'Query' }
+  & { launches?: Maybe<Array<Maybe<(
+    { __typename?: 'Launch' }
+    & Pick<Launch, 'launch_year' | 'launch_success' | 'mission_name' | 'launch_date_utc'>
+    & { launch_site?: Maybe<(
+      { __typename?: 'LaunchSite' }
+      & Pick<LaunchSite, 'site_name'>
+    )>, links?: Maybe<(
+      { __typename?: 'LaunchLinks' }
+      & Pick<LaunchLinks, 'video_link' | 'wikipedia' | 'flickr_images'>
+    )> }
+  )>>> }
+);
+
 export type GetMissionQueryVariables = Exact<{
   id: Scalars['String'];
 }>;
@@ -758,6 +779,51 @@ export type GetRocketsQuery = (
 );
 
 
+export const GetLaunchesDocument = gql`
+    query getLaunches($order: Order!, $limit: Int!) {
+  launches(order: $order, limit: $limit, offset: 0, sort: "launch_date_local") {
+    launch_year
+    launch_success
+    mission_name
+    launch_site {
+      site_name
+    }
+    launch_date_utc
+    links {
+      video_link
+      wikipedia
+      flickr_images
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetLaunchesQuery__
+ *
+ * To run a query within a React component, call `useGetLaunchesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetLaunchesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetLaunchesQuery({
+ *   variables: {
+ *      order: // value for 'order'
+ *      limit: // value for 'limit'
+ *   },
+ * });
+ */
+export function useGetLaunchesQuery(baseOptions?: Apollo.QueryHookOptions<GetLaunchesQuery, GetLaunchesQueryVariables>) {
+        return Apollo.useQuery<GetLaunchesQuery, GetLaunchesQueryVariables>(GetLaunchesDocument, baseOptions);
+      }
+export function useGetLaunchesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetLaunchesQuery, GetLaunchesQueryVariables>) {
+          return Apollo.useLazyQuery<GetLaunchesQuery, GetLaunchesQueryVariables>(GetLaunchesDocument, baseOptions);
+        }
+export type GetLaunchesQueryHookResult = ReturnType<typeof useGetLaunchesQuery>;
+export type GetLaunchesLazyQueryHookResult = ReturnType<typeof useGetLaunchesLazyQuery>;
+export type GetLaunchesQueryResult = Apollo.QueryResult<GetLaunchesQuery, GetLaunchesQueryVariables>;
 export const GetMissionDocument = gql`
     query GetMission($id: String!) {
   mission(id: $id) {
