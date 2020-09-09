@@ -1558,7 +1558,7 @@
     auto-bind "~4.0.0"
     tslib "~2.0.0"
 
-"@graphql-codegen/typescript-react-apollo@1.17.8":
+"@graphql-codegen/typescript-react-apollo@2.0.7-alpha-67af76ba.0":
   version "2.0.7-alpha-67af76ba.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-react-apollo/-/typescript-react-apollo-2.0.7-alpha-67af76ba.0.tgz#4711c83cd614c12d3ab9a397956f5a8ae9006c44"
   integrity sha512-c+vBZ+n4xhQdG0iVdm5C/XRCir6XPUBNTOF5iOQgtoqH8lE1Bemc4J23Xh3reA1eDNKpfQUakBgu1aAqMYP2iQ==
